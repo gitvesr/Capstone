@@ -1,0 +1,101 @@
+Data Science Capstone Project
+========================================================
+author: Venkat Sri (vesr)
+date: Feb 2018
+transition: fade
+transition-speed: slow
+
+<style type="text/css">
+
+/* slide titles */
+
+.reveal h3 { 
+  font-size: 30px; text-decoration: underline;
+  color: navy;
+}
+.noHyphen {
+  word-wrap: normal;
+  -moz-hyphens: none;
+}
+
+/* customizing tables exhibition */
+.reveal table {
+  border-style: solid;
+  border-color: gray;
+  width:60%;
+
+.reveal table th {
+  background-color: #d0d0d0;
+  font-size: 14pt;
+}
+.reveal table td {
+  width: 33%;
+  font-size: 13pt;
+}
+</style>
+
+
+<hr style="border: 0; border-bottom: 2px dashed #ddd; background: #999;">
+<h2 style="color:black">Predicting Next Words(s) Project </h2>
+<h3>Peer Graded Assignment</h3>
+
+
+Overview
+========================================================
+
+<div class="noHyphen"><em>Scope and Objective of this Project </em>Coursera<em> Data Science Specialization.</em></div>
+</p>
+
+The objective of the application is to implement model that prompts hint (next set of words), related to the phrase/text that's been entered by the user. The input for this program consists of three datasets twitter, news and blogs from HC Corpora. Data has been cleaned and a subset is used as sample data  in R data frames. Back-off algorithm is used complementing with NLP techniques to create n-grams.  The UI layer has been developed with Shiny package with additional libraries (such as a DT, javascript, HTML Render) to enhance the user experience. 
+
+
+Approach and Solution Steps
+========================================================
+Here are the key steps in define, design and developing the application, based on the three data sources available through Swiftkey.
+
+Multiple tasks have been performed
+- Defining the problem, download and clean the data; 
+- Making of Exploratory Data Analysis to understand the data 
+- Tokenization of words and predictive text mining; 
+- Writing a milestone project and a prediction model; 
+- Developing a shiny application 
+- Developing supporting documentation and the presentation
+
+
+Process:  Input, Methods, and Ouput
+========================================================
+
+Input: The data came from HC Corpora with three files (Blogs, News and Twitter). A sample data was created based on this huge data file. The same data was converted to lower case, removed the punctuation, links, whitespace, numbers and profanity words.
+
+Model: The sample text was "tokenized" into so-called n-grams** to construct the predictive models (Tokenization is the process of breaking a stream of text up into  words, phrases. N-gram is a contiguous sequence of n items from a given sequence of text). The final data (RDS) comes from the link Milestone Report < >
+The n-grams files or data.frames (unigram, bigram, trigram and quadgram) are matrices with frequencies of words, used into the algorithm to predict the next word based on the text entered by the user.
+
+Output:  Shiny Package has been created to enter the input data and use the model to predict the next work. The data is displayed in multiple tabs for better classification.
+
+
+Application: Steps to execute the program
+========================================================
+![Next Word Prediction Application](Image1.png)
+- #1. Enter the word(s) or text and click Predict
+- #2. Tab 1: Word Prediction Result Displays the best guess based on the n-gram model.  
+- #3  Tab 2:  Behind the Scens:  Displays actual processing steps, time taken, possible words etc 
+- #4  Tab 3:  Documentation and References (links to docs)
+- 5  Possible next word - based on the Frequency and Probability 
+
+
+Viewing the Shiny App and Links
+========================================================
+
+Sample Data (These phrases are picked from  Quiz 2 and Quiz 3)
+
+    > Test Data
+    - You made (**my day**)
+    - and a case of (**the / beer**)
+    - make me the (**happiest**)
+
+> LINKS
+- <a href="https://svicente99.shinyapps.io/NextWord/" target="_blank" style="color:maroon">Application __Shiny App__</a>&nbsp; &larr;&larr;&nbsp;
+*_Core Deliverable of this project_*
+- <a href="http://github.com/svicente99/DataScience_Capstone_ShinyApp" target="_blank">__GitHub__ repository code to this application</a>
+- <a href="http://rpubs.com/vesr/CapstoneMilestoneReport" target="_blank">__Exploratory Analysis__ link to Milestone Report</a>
+- <a href="https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip" target="_blank">__Data Store__ link to Data used for this project</a>
